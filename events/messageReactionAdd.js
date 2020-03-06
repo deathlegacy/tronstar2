@@ -37,13 +37,13 @@ const embed2 = new Discord.RichEmbed()
 
      embed2.setTitle("Starboard Channel")
       embed2.setColor(config.embedColor)
-       embed2.setDescription("You do not have a ``ninja-starboard`` channel so i have created one for you and placed it at the top of the channel list, Move it where ever you wish")
+       embed2.setDescription("You do not have a ``starboard`` channel so i have created one for you and placed it at the top of the channel list, Move it where ever you wish")
         embed2.addField("Note", "To post the message you reacted to you will have to remove the reaction and do it again")
         embed2.setFooter("Starboard Bot")  
 
     const starboardChannel = reaction.message.guild.channels.find("name", "starboard");
-         if (!message.guild.channels.exists("name", "ninja-starboard")) return reaction.message.channel.send(embed2) .then(message.guild.createChannel("ninja-starboard", "text"))       
-         //if(!message.guild.channels.exists("name", "ninja-starboard")) return reaction.message.channel.send("Nope")
+         if (!message.guild.channels.exists("name", "starboard")) return reaction.message.channel.send(embed2) .then(message.guild.createChannel("ninja-starboard", "text"))       
+         //if(!message.guild.channels.exists("name", "starboard")) return reaction.message.channel.send("Nope")
     try {
         if(reaction.emoji.name !== "⭐") return console.log('1');
         const fetch = await starboardChannel.fetchMessages({ limit: 100 }).then(console.log('2'));
