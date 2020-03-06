@@ -28,9 +28,9 @@ let bot = star.users.get('544049582959755264');
 //This is the embed message code for the command
    message.delete().catch();
 const embed = new Discord.RichEmbed()
-   embed.setTitle("About Ninja Starbboard")
-   embed.setThumbnail("https://i.imgur.com/NSHqjRM.jpg")
-   embed.setDescription("Ninja Starboard Is a Custom Starboard bot Coded in the ``discord.js`` library")
+   embed.setTitle("About Starbboard")
+   embed.setThumbnail("https://cdn.discordapp.com/attachments/92560678774120448/394428112164880384/TRON_MODIFIED.png")
+   embed.setDescription("Starboard Is a Custom Starboard bot Coded in the ``discord.js`` library")
    embed.setColor(config.embedColor)
    embed.addField("Bot Author", `${owner}`, true)
    embed.addField("Author Tag", `${config.ownerName}`, true)
@@ -39,9 +39,9 @@ const embed = new Discord.RichEmbed()
    embed.addField('Current Status', `${star.user.presence.status.toUpperCase()}`, true)
    embed.addField('Current Game', `Streaming **${star.user.presence.game === null ? "No Game" : star.user.presence.game.name}**`, true)
    embed.addField('Bot Created', `${moment(star.user.createdAt).toString().substr(0, 15)}\n(${moment(star.user.createdAt).fromNow()})`, true)        
-   embed.addField("Source Code", "[GitHub Repo](https://github.com/GrimDesignsFiveM/Ninja-Starboard-Bot)", true)
+   embed.addField("Source Code", "[GitHub Repo](https://github.com/deathlegacy/tronstar2)", true)
    embed.addField("Starboard Support", "[Support Server](https://discord.gg/yFmtAUM)", true)
-   embed.setFooter(`© Ninja Starboard Bot`, `https://i.imgur.com/NSHqjRM.jpg`);
+   embed.setFooter(`© Ninja Starboard Bot`, `https://cdn.discordapp.com/attachments/92560678774120448/394428112164880384/TRON_MODIFIED.png`);
    message.channel.send(embed).then(sentMessage => {
      sentMessage.react('🆗')
   });
