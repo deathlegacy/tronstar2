@@ -1,0 +1,54 @@
+
+{
+  "name": "Ninja Starboard",
+  "description": "Basic Starboard Bot",
+  "keywords": [
+    "Node",
+    "Heroku",
+    "Discord"
+    
+  ],
+  "website": "https://ninja-bot.webnode.com/",
+  "repository": "https://github.com/GrimDesignsFiveM/Ninja-Starboard-Bot",
+  "logo": "https://cdn.discordapp.com/avatars/636337796617076784/aed421d35f91ce91de1addfe7df4edb4.png?size=2048?size=1024",
+  
+  "env": {
+    "CLIENTID": {
+      "description": "Discord Client Id. Get it here: https://discordapp.com/developers/applications/",
+	  "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Discord BOT token. Get it here: https://discordapp.com/developers/applications/",
+	  "required": true
+    },
+    "PREFIX": {
+      "description": "Discord Bot Prefix, If you change this please make sure you change it in the config aswell.",
+	  "required": true
+    },
+    "dbotsToken": {
+      "description": "DBL (Discord Bot List) Token (DO NOT CHANGE THIS)",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjMzNzc5NjYxNzA3Njc4NCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTcyMjk2MzIwfQ.aIq45s-DzLy0YXilORcZBPnDPpDtGLnZtk_UV6nw2gA",
+	  "required": true
+    },
+    "dbotsToken2": {
+      "description": "DBL (Discord Bot List) Token (DO NOT CHANGE THIS)",
+         "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjMzNzc5NjYxNzA3Njc4NCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTcyMjk2MzIwfQ.aIq45s-DzLy0YXilORcZBPnDPpDtGLnZtk_UV6nw2gA",
+	  "required": true
+    },
+    "OWNERID": {
+      "description": "Owners Id, to assign more than one use comma(,) to separate.",
+	  "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+	{
+		"url": "heroku/nodejs"
+	}
+  ]
+}
