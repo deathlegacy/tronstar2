@@ -14,15 +14,6 @@ const chalk = require('chalk');
 const Canvas = require('canvas');
 const dbots = require('superagent')
 const timers = require('timers')
-const activity1 = config.activity1
-const type1 = config.type1
-const activity2 = config.activity2
-const type2 = config.type2
-const activity3 = config.activity3
-const type3 = config.type3
-const type4 = config.type4
-const activity4 = config.activity4
-const time1 = config.activitytime
 const prefix = process.env.PREFIX;
 
 //////////////////////////////***MESSAGE DELETE FUNCTIONS***/////////////////////////////////////////////
