@@ -1,0 +1,11 @@
+{
+    "prefix": "star",
+    "starboard": "starboard",
+    "ownerID": [
+        ""
+    ],
+    "modules": [
+          "Help",
+          "System"
+    ]
+}
