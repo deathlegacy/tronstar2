@@ -1,13 +1,3 @@
-/*/////////////////////////////////////////////////////////////////////////////////////
- * Code by Tyler. H#9393!! (☣ Tσxιƈ Dҽʋ ☣#7308)
- * Ninja Starboard Bot
- *
- *  I DO NOT authorize you to use this bot or the corresponding code without my consent first violation of this term will result in a copyright strike or lawsuit
- *  If you fork this Bot repo make sure you give me credit for all files and folders associated as all the branding for this bot is registered and copy written. 
- *  Due to the fact that no license is provided with this bot that means that it falls under the not publicly available category.
- //////////////////////////////////////////////////////////////////////////////////////
-*/
-
 //////////////////////////////***REQUIRED NODE MODULES***////////////////////////////////////////////////
 const Discord = require("discord.js");
 const Music = require('discord.js-musicbot-addon');
@@ -34,78 +24,6 @@ const type4 = config.type4
 const activity4 = config.activity4
 const time1 = config.activitytime
 const prefix = process.env.PREFIX;
-
-//////////////////////////////***PLAYING STATUS, INVITE TIMEOUTS & MORE***////////////////////////////////////////
-star.on("ready",  async () => {
-//console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
- star.user.setGame("Starting Up My Code");
-});
-
-  star.on('ready',  async () => {
-let activities = [
-  {
-    name:`${activity1} for ${star.users.size} Users`,
-     options:{
-      type:`${type1}`
-    }
-  },
-  {
-    name:`${activity2}`,
-     options:{
-      type:`${type2}`
-    }
-  },
- {
-    name:`${activity3}`,
-     options:{
-      type:`${type2}`
-    }
-  }
-]
-let i = 0;
-
-    starLog(`${star.user.username} has started, with ${star.users.size} users, in ${star.channels.size} channels of ${star.guilds.size} guilds.`);
-    timers.setInterval(() => {
-      i = i == activities.length ? 0 : i
-      star.user.setActivity(activities[i].name, activities[i].options)
-      i++
-    }, time1)
-  });
-
-// Try local JSON config, if not, expect Process Env (Heroku)
-try{
-  star.config = require("./data/config.json");
-} catch (e) {
-  if(process.env.botToken) {
-    ninja.config = {
-      token: process.env.BOT_TOKEN,
-      prefix: process.env.PREFIX,
-      ownerid: process.env.OWNERID,
-      dbotsToken: process.env.dbotsToken,
-      dbotsToken2: process.env.dbotsToken2
-    };
-  } else {
-    throw "NO CONFIG FILE FOUND, NO ENV CONF FOUND, EXITING";
-  }
-}
-
-star.on("guildCreate", guild => {
-  // This event triggers when the bot joins a guild.
-const embed = new Discord.RichEmbed()
- embed.setTitle("Thanks For Adding Me")
- embed.setColor(embeds.embedColor)
- embed.setTimestamp()
- embed.setDescription(embeds.guildDescrpt)
- embed.addField("About Me", "``star about`` Tells you some info about me")
- embed.addField("Setup Help", "``star setup`` Shows you how to properly set me up")
- embed.addField("Starboard Invite", `[Invite Me Here](${embeds.invLink})`)
- embed.addField("Starboard Support", `[Support Server](${embeds.helpLink})`)
- embed.setFooter(`${embeds.embedFooter}`, `${embeds.embedLink}`);
-
-  starLog(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  star.user.setGame(`gen help in ${star.guilds.size} Servers`, `https://www.twitch.tv/monstercat`);
-  guild.owner.send(embed)
- });
 
 //////////////////////////////***MESSAGE DELETE FUNCTIONS***/////////////////////////////////////////////
 /*This event allows any message that the bot reacts to with the emoji provided,
@@ -155,9 +73,3 @@ fs.readdir(`./src/commands/${c}/`, (err, files) => { // Here we go through all f
 });
 star.login(process.env.BOT_TOKEN); //process.env.BOT_TOKEN Allows the token to be defined and set via the bots database to ensure it is never public!
 
-/* Code by Tyler. H#9393!! (☣ Tσxιƈ Dҽʋ ☣#7308)
- *  I DO NOT authorize you to use this bot or the corresponding code without my consent first.
- *  If you fork this Bot repo make sure you give me credit for all files and folders associated. 
- *  Due to the fact that no license is provided with this bot that means that it falls under the not publicly available category.
- * Unauthorized use of this bot could result in your GitHub and Discord accounts being terminated!
- */
