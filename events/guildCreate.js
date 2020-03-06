@@ -10,9 +10,7 @@ let gcEmbed = new Discord.RichEmbed()
  .setTimestamp()
  .setDescription("***Please Note:** Ninja Bot requires various channels to complete proper setup")
  .addField("Setup Help", "``nb/setup`` Shows you how to setup Ninja Bot") 
- .setFooter("Ninja Bot")
+ .setFooter("TRON Bot")
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setGame(`gen help in ${client.guilds.size} Servers`, `https://www.twitch.tv/monstercat`);
-  message.author.send(gcEmbed)
  });
 }
