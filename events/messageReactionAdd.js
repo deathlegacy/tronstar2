@@ -57,7 +57,7 @@ const embed2 = new Discord.RichEmbed()
         }
     if(!stars) {
         //if(!message.guild.channels.exists("name", "ninja-starboard")) throw `It appears that you do not have a ninja-starboard channel.`
-        const embed = await starEmbed(15844367, message.cleanContent, message.author.tag, message.author.displayAvatarURL, new Date(), `⭐ 1 | ${message.id}`);
+        const embed = await starEmbed(15844367, message.cleanContent, message.author.tag, message.author.displayAvatarURL, new Date(), `⭐ 2 | ${message.id}`);
         await starboardChannel.send({ embed });
     }
 } catch (error) {
