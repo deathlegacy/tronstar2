@@ -47,7 +47,7 @@ const embed2 = new Discord.RichEmbed()
     try {
         if(reaction.emoji.name !== "⭐") return console.log('1');
         const fetch = await starboardChannel.fetchMessages({ limit: 100 }).then(console.log('2'));
-        const stars = fetch.find(m => m.embeds[2].footer.text.startsWith("⭐") && m.embeds[2].footer.text.endsWith(message.id));
+        const stars = fetch.find(m => m.embeds[0].footer.text.startsWith("⭐") && m.embeds[0].footer.text.endsWith(message.id));
         if(stars) {
             const star = /\⭐\s([0-9]{1,3})\s\|\s([0-9]{17,20})/g.exec(stars.embeds[0].footer.text);
             const _star = stars.embed[0];
